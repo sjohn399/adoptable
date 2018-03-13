@@ -1,0 +1,73 @@
+<?php 
+/* 
+Author: Samuel Johnson
+Date: 3/2/2018
+*/
+
+$file = fopen("trainingCases.csv", "r");
+
+$importArray = array();
+
+while(($data = fgetcsv($file)) != False)
+{
+	$importArray[] = $data;
+}
+
+fclose($file);
+
+$importArray = $importArray[0];
+
+$importArray = array_slice($importArray, 13);
+
+array_shift($importArray);
+
+?>
+
+<html>
+	<head>
+		<link rel="stylesheet" type = "text/css" href="adoptable.css">
+	</head>
+	<body>
+		<form method="POST" action="adoptable.php" id="revInfo">
+		
+		<h1><span class = "purple">ADOPT</span><span class = "outline">ABLE</span></h1>
+		<h3><span class = "purple">How long until</span><span class = "outline"> you find your forever home?</span></h3>
+		<fieldset>
+			<label class = "labels" for="size" >SIZE </label><br>
+				<div class = "inputLabels">Small<input type="radio" name="size" value = 'small' required></div>
+				<div class = "inputLabels">Medium<input type="radio" name="size" value = 'medium' required></div>
+				<div class = "inputLabels">Large<input type="radio" name="size" value = 'large' required></div>
+				<div class = "inputLabels">Extra-Large<input type="radio" name="size" value = 'xtraLarge' required></div><br>
+			<label class = "labels" for="sex" >SEX </label><br>
+				<div class = "inputLabels">Male<input type="radio" name="sex" value = 'male' required></div> 
+				<div class = "inputLabels">Female<input type="radio" name="sex" value = 'female' required></div><br>
+			<label class = "labels" for="mix">MIX </label><br>
+				<div class = "inputLabels">Yes<input type="radio" name="mix" value = 'mixY' required></div> 
+				<div class = "inputLabels">No<input type="radio" name="mix" value = 'mixN' required></div><br>
+			<label class = "labels" for="age">AGE </label><br>
+				<div class = "inputLabels">Baby<input type="radio" name="age" value = 'baby' required></div> 
+				<div class = "inputLabels">Young<input type="radio" name="age" value = 'young' required></div> 
+				<div class = "inputLabels">Adult<input type="radio" name="age" value = 'adult' required></div> 
+				<div class = "inputLabels">Senior<input type="radio" name="age" value = 'senior' required></div><br>
+			<label class = "dropdown" for="breed1">First Breed </label>
+				<select name = "breed1">
+					<?php
+						foreach($importArray as $value) {
+							echo '<option value = "' . $value . '">' . $value . '</option>';
+						}
+					?>
+				</select><br>
+			<label class = "dropdown" for="breed2">Second Breed </label>
+				<select name = "breed2">
+					<?php
+						foreach($importArray as $value) {
+							echo '<option value = "' . $value . '">' . $value . '</option>';
+						}
+					?>
+				</select>
+		</fieldset>
+			<input class = "button" type="submit" value="SUBMIT" id="mySubmit">
+			<input class = "button" type ="reset" value = "CLEAR" id = "myClear">
+		</form>
+	</body>
+</html> 

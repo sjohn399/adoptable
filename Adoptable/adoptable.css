@@ -1,0 +1,116 @@
+body {
+	font-family: "Courier New";
+	font-size: 1.2em;
+	margin-top: 250px;
+	background-image: url("pug.jpeg");
+}
+ul {
+	list-style-type: none;
+}
+h1 {
+	font-size: 100px;
+}
+h3 {
+	position: relative;
+	bottom: 50px;
+}
+h1, h3 {
+	text-align: center;
+	color: white;
+}
+.purple {
+	color: #9400D3;
+}
+
+#daysToAdopt
+{
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.outline {
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.button {
+	color: white;
+	border-radius: 8px;
+	background-color: #9400D3;
+	position: relative;
+	left: 200px;
+	top: 10px;
+	font-size: 20px;
+	font-style: inherit
+}
+fieldset {
+	border-radius: 25px;
+	border: 5px solid #9400D3;
+	background-color: white;
+	width: 600px;
+	height: 300px;
+	margin: auto;
+}
+.labels {
+	font-size: 20px;
+	font-weight: bold;
+	display: inline-block;
+	position: relative;
+	top: 10px;
+	left: 10px;
+}
+input {
+	position: relative;
+	left: 2px;
+}
+
+.dropDown, select {
+	position: relative;
+	left: 80px;
+	top: 50px;
+}
+
+.inputLabels {
+	position: relative;
+	top: 10px;
+	display: inline;
+	padding: 20px;
+	text-align: center;
+}
+#header {
+	margin-top: 40px;
+	width: 370px;
+	margin: auto;
+}
+#report {
+	width: 370px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.output {
+	float: right;
+	width: 150px;
+}
+form {
+	width: 600px;
+	height: 300px;
+	margin: auto;
+	border-radius: 25px;
+}
+
+#mySubmit, #myClear {
+	margin: auto;
+	width: 100px;
+}
+
+#container {
+	border: 5px solid #9400D3;
+	border-radius: 25px;
+	margin: auto;
+	width: 400px;
+	background-color: white;
+}
